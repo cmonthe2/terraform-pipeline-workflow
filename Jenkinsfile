@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('checkout') {
+        stage('git clone') {
             steps {
                checkout([$class: 'GitSCM', branches: [[name: '**']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/cmonthe2/Module_terrafom-.git']]])
             }
